@@ -1,0 +1,6 @@
+function [ success ] = resetOdoCov(socket)
+%RESETODOCOV Summary of this function goes here
+%   Detailed explanation goes here
+    
+
+end

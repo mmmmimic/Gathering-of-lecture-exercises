@@ -1,0 +1,3 @@
+LIBRARY	"mssend"
+EXPORTS
+	mexFunction

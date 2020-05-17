@@ -1,0 +1,3 @@
+LIBRARY	"msconnect"
+EXPORTS
+	mexFunction
