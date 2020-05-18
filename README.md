@@ -1,6 +1,5 @@
 # Gathering of Lecture Exercises
-## 31388  
-Advanced Autonomous Robot
+## 31388  Advanced Autonomous Robot
 | Exercise   | Topic |
 | ---------- | --- |
 | ex1 |  Introduction |
@@ -10,8 +9,7 @@ Advanced Autonomous Robot
 |ex5|Vision|
 |ex8-11|Extended Kalman Filter|
 |ex12-13|Path Planner|
-## 31392
-Perception for Autonomous System
+## 31392 Perception for Autonomous System
 | Exercise   | Topic |
 | ---------- | --- |
 | week1 |  Image Processing |
