@@ -1,0 +1,2 @@
+﻿  ConsoleApplication1.cpp
+E:\ManxiLin\2020Spring\ComputerVision\L1\ConsoleApplication1\ConsoleApplication1.cpp(5,10): error C1083:  Cannot open include file: 'opencv2/cv.hpp': No such file or directory
