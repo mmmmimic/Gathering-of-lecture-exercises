@@ -46,5 +46,20 @@
 |ex10|Registration|
 |ex11|Line and Path Tracing|
 |exam||
+## 31383 Robotics
+| Exercise   | Topic |
+| ---------- | --- |
+| week1 |  Motor |
+| week2 |  Robotics Kinematics 1 |
+| week3| Robotics Kinematics 2|
+|week4|	Velocity Kinematics|
+|week6|Trajectory Planning and Dynamics|
+|week9|Control an Industrial Robot|
+|final assignment|Alto Robot Analysis|
+|exam|| 
+## 31391 Software Framework for Autonomous Robots
+| Exercise   | Topic |
+| ---------- | --- |
+| | |
 
 
