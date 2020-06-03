@@ -24,8 +24,7 @@
 ## 02504 Computer Vision
 | Exercise   | Topic |
 | ---------- | --- |
-| week1 |  Rigid and Perspective
-Transformations in Homogeneous Coordinates |
+| week1 |  Rigid and Perspective Transformations in Homogeneous Coordinates |
 | week2 |  	Camera Model|
 | week3|	Multiview Geometry|
 |week4|	Linear Algorithms|
