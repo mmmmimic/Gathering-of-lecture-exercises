@@ -32,3 +32,19 @@
 |week6|Simple Features|
 |week7|ORB Features|
 |week8|Structured Light| 
+## 02502 Image Analysis
+| Exercise   | Topic |
+| ---------- | --- |
+| ex1 |  Digital Images |
+| ex2 |  Cameras|
+| ex3|	Pixelwise Operations|
+|ex4|	Filtering|
+|ex5|Morphology|
+|ex6|Blob Analysis and Cell Counting|
+|ex7|Pixel Classifcation|
+|ex9|Geometric Transformations| 
+|ex10|Registration|
+|ex11|Line and Path Tracing|
+|exam||
+
+
