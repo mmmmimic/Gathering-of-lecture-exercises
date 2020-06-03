@@ -1,0 +1,74 @@
+Debug file for the robot initialization
+---------------------------------------
+Fri Feb  7 11:14:49 2020
+---------------------------------------
+
+Module : robotinfo
+   type      differential     enum number        0
+   name      smr
+
+Module : odometry
+   cl           0.000102
+   cr           0.000102
+   w            0.260000
+   robotlength  0.265000
+   ts           0.010000
+   maxtick          1000
+   control             0
+   enctype             0
+
+Module : motion control
+   ts           0.010000
+   line_gain    0.050000
+   line_tau     10.000000
+   line_alfa    0.300000
+   wall_gain    1.000000
+   wall_tau     0.700000
+   wall_alfa    0.200000
+   gain         1.000000
+   tau          0.160000
+   alfa         0.200000
+   drive_kangle 2.250000
+   drive_kdist  4.800000
+   w            0.260000
+   robotlength  0.265000
+   lim          0.200000
+   stopdist     0.180000
+   alarmdist    0.100000
+   velcmd       0.300000
+   acccmd       0.300000
+   nolinedist   0.200000
+
+Module : motor control
+   velscalel    100.000000
+   velscaler    100.000000
+   kp           66.000000
+   ki           10.000000
+
+Module : line sensor
+   size                8
+   k_filt       0.750000
+
+Module : filter
+   measurementnoise_std_x           0.100000
+   measurementnoise_std_y           0.110000
+   processnoise_std_stearingangle   0.010000
+   processnoise_std_dist            0.020000
+   type                  EKF
+   run                          1
+   use                          0
+   size_input                   2
+   size_state                   3
+   size_noise_process           2
+   size_output                  2
+   size_noise_output            2
+   gpsoffset_easting     0.000000
+   gpsoffset_northing    0.000000
+
+Module : gpsmouse
+   hostname     localhost
+   port             9500
+   SBAS                0
+   run                 1
+   use                 1
+

@@ -1,0 +1,33 @@
+drive @v 0.2 :($irdistfrontleft<0.45)|($irdistfrontmiddle<0.45)|($irdistfrontright<0.45)
+stop
+wait 3
+switch ($fiducialid)
+turn 180 @v 0.2
+case 1 
+turn 180 @v 0.2
+stop
+fwd 1
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.25 @v 0.2
+stop
+turn 90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+case 2 
+turn 180 @v 0.2
+stop
+fwd 1
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.25 @v 0.2
+stop
+turn -90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+endswitch
+

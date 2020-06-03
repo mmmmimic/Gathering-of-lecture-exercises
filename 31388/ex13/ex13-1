@@ -1,0 +1,13 @@
+laser "findroute startx=3.2 starty=0.3 endx=0.3 endy=3.3"
+wait 1
+c = $l4
+eval c
+label "loop"
+stringcat "getpoint p="c
+laser "$string"
+wait 1
+eval $l5
+eval $l6
+eval $l7
+c=c-1
+if (c>-1) "loop"

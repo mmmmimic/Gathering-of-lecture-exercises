@@ -1,0 +1,80 @@
+drive  @v 0.2 :($irdistfrontmiddle<0.3)
+stop
+get "guidemark" :($guidemarkok>1)
+wait 3
+switch ($guidemarkok)
+stop
+case 1 %%%%%
+turn 180 @v 0.2
+stop
+fwd 0.5
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.25 @v 0.2
+stop
+turn -90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+case 2 %%%%%
+turn 180 @v 0.2
+stop
+fwd 1
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2
+followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+%%%%%%%%%%
+fwd 0.25 @v 0.2
+stop
+turn -90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+case 3 %%%%%
+turn 180 @v 0.2
+stop
+fwd 1
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2
+followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+%%%%%%%%%%
+fwd 0.25 @v 0.2
+stop
+turn -90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+case 4 %%%%%
+turn 180 @v 0.2
+stop
+fwd 1
+turn -180 @v 0.2
+followline "bl" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2
+followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2
+followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+fwd 0.3 @v 0.2
+followline "bm" @v 0.2 :($crossingblackline==1)
+stop
+%%%%%%%%%%
+fwd 0.25 @v 0.2
+stop
+turn -90 @v 0.2
+%followline "bm" @v 0.1 :($drivendist>0.1)
+drive @v 0.2 :($drivendist>0.1)
+stop
+endswitch
+

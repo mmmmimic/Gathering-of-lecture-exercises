@@ -1,0 +1,19 @@
+% drive the robot via Kalman Filter
+laser "localize"
+laser “push t='1.0' cmd='localize' “
+wait 1
+N=0
+ignoreobstacles
+fwd 0.5
+wait 1
+label "loop"
+drivew 1.4 1.4 90 :($targetdist<0.25)
+wait 3
+drivew 0.4 1.4 180 :($targetdist<0.25)
+wait 3
+drivew 0.4 0.4 270 :($targetdist<0.25)
+wait 3
+drivew 1.4 0.4 0 :($targetdist<0.25)
+wait 3
+N = N+1
+if (N<9) "loop"

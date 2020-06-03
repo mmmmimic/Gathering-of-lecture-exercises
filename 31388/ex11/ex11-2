@@ -1,0 +1,26 @@
+% since drive is based on odometry
+% the start point is (0,0,0), in simulator it is set (0.9, 0.9, 0)
+% go to the first corner
+ignoreobstacles
+fwd 0.5
+ignoreobstacles
+turn 90
+ignoreobstacles
+fwd 0.5
+ignoreobstacles
+turn 90
+% N is the counter
+% Now we arrive the first point
+N=0
+label "loop"
+drive -0.5 0.5 180: ($targetdist <0.25)
+wait 1
+drive -0.5 -0.5 270: ($targetdist <0.25)
+wait 1
+drive 0.5 -0.5 0: ($targetdist <0.25)
+wait 1
+drive 0.5 0.5 90: ($targetdist <0.25)
+wait 1
+N = N+1
+wait 1
+if(N<5) "loop"

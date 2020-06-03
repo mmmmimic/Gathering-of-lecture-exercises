@@ -1,0 +1,8 @@
+get "guidemark" :($guidemarkok>1)
+wait 5
+switch($guidemarkok)
+turn 10
+case 2
+fwd 0.5
+stop
+endswitch

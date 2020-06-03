@@ -1,0 +1,11 @@
+laser "localize"
+wait 1
+wait 1
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+wait 2
+eval $l0
+eval $l1
+eval $l2
+eval $res0
+eval $res1
+eval $res2

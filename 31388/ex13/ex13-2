@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%
+%% Kalman localization
+laser "localize"
+laser "push t='1.0' cmd='localize'"
+wait 1
+%% set odometry
+%set "$odox" 3.3
+%set "$odoy" 0.35
+%set "$odoth" 0
+%% make a turn
+turn 180
+wait 1
+%% make an array to store points
+array "x" 10
+array "y" 10
+array "th" 10
+x[0]=1.7
+x[1]=0.2
+x[2]=0.2
+x[3]=0.95
+x[4]=0.95
+x[5]=0.2
+x[6]=0.2
+x[7]=1.7
+x[8]=1.7
+x[9]=0.2
+y[0]=0.3
+y[1]=0.3
+y[2]=1.05
+y[3]=1.05
+y[4]=1.8
+y[5]=1.8
+y[6]=2.55
+y[7]=2.55
+y[8]=3.3
+y[9]=3.3
+th[0]=180
+th[1]=90
+th[2]=0
+th[3]=90
+th[4]=180
+th[5]=90
+th[6]=0
+th[7]=90
+th[8]=180
+th[9]=180
+%% run route
+c = 0
+label "loop"
+xx = x[c]
+yy = y[c]
+t = th[c]
+drivew xx yy t:($targetdist<0.25)
+wait 3
+c=c+1
+eval c
+if(c<10) "loop"

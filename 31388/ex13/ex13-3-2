@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%
+%% Kalman localization
+laser "localize"
+laser "push t='1.0' cmd='localize'"
+wait 3
+%% set odometry
+%set "$odox" 1.7
+%set "$odoy" 0.3
+%set "$odoth" 0
+%%%%%%%%%%%
+% find route
+array "sx" 5
+array "sy" 5
+id = 0
+sx[0]=1.7
+sx[1]=0.2
+sx[2]=3.2
+sx[3]=0.2
+sx[4]=1.7
+sy[0]=0.3
+sy[1]=0.3
+sy[2]=0.3
+sy[3]=1.05
+sy[4]=0.3
+label "bigloop"
+startx=sx[id]
+starty=sy[id]
+endx=sx[id+1]
+endy=sy[id+1]
+eval startx
+eval starty
+eval endx
+eval endy
+stringcat "findroute startx="startx"starty="starty"endx="endx"endy="endy
+laser "$string"
+wait 1
+%% run route
+c = $l4
+eval c
+label "loop"
+stringcat "getpoint p="c
+laser "$string"
+wait 1
+eval $l5
+eval $l6
+eval $l7
+th = $l7/3.14159*180
+drivew $l5 $l6 th:($targetdist<0.25)
+wait 5
+c=c-1
+if (c>-1) "loop"
+id = id+1
+if (id<4) "bigloop" 

@@ -1,0 +1,16 @@
+%we need input (dx,dy,dt)
+dx=-0.5
+dy=-0.5
+dt=-180
+log "$odox" "$odoy" "$odoth"
+arg=atan2(dy, dx)
+%arg = normalizeangledeg(arg)
+wait 0.5
+dis=sqrt(dx*dx+dy*dy)
+arg = arg/3.1415926535932384626*180
+turn arg
+fwd dis
+stop
+arg = -arg
+turn arg
+turn dt

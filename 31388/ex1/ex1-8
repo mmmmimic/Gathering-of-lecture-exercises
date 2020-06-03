@@ -1,0 +1,3 @@
+followline "bw" @v 0.2 :($crossingblackline==1)
+stop
+ 

@@ -1,0 +1,4 @@
+drive @v 0.3 :($irdistfrontleft<0.45)
+turn -90
+stop
+

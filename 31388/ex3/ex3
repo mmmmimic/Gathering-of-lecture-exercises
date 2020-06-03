@@ -1,0 +1,49 @@
+% feed back control
+%%%%%%%%%%%
+xTw = 0.1
+yTw = 0.1
+thTw = 90/180*3.1415926535 %radian
+kRho = 0.3
+kAlpha = 0.8
+kBeta = -0.35
+epoch = 0
+thT = $odoth-thTw
+rho = 0
+wl = 0
+wr = 0
+v = 0
+w = 0
+%log "thT" "rho" "wl" "wr" "v" "w"
+%invtrans(xTw,yTw,thTw,$odox,$odoy,$odoth)
+%%%%%%%%%%%%
+log "$odox" "$odoy" "$odoth"
+label "loop"
+epoch = epoch+1
+%%%%%%%%%%%%
+xT = cos(thTw)*($odox-xTw)+sin(thTw)*($odoy-yTw)
+yT = -sin(thTw)*($odox-xTw)+cos(thTw)*($odoy-yTw)
+thT = $odoth-thTw
+thT = normalizeanglerad(thT)
+dx = -xT
+dy = -yT
+rho = sqrt(dx*dx+dy*dy)
+e = atan2(dy, dx)
+alpha = -thT+atan2(dy, dx)
+beta = -thT-alpha
+alpha = normalizeanglerad(alpha)
+alpha = alpha
+beta = normalizeanglerad(beta)
+beta = beta
+%%%%%%%%%%%%%%%%
+v = kRho*rho
+w = kAlpha*alpha+kBeta*beta
+l  = 0.26 % measured
+wl = (2*v-w*l)/2
+wr = (2*v+w*l)/2
+motorcmds wl wr
+if (v<0.005) "stop"
+if (epoch>9999) "stop"
+if(rho>0.01|abs($odoth-thTw)>0.02) "loop"
+label "stop"
+stop 
+

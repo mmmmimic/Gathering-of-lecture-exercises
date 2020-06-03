@@ -1,0 +1,8 @@
+laser "addline startx=0 starty=0 endx=1.8 endy=0 name='line1'"
+laser "addline startx=1.8 starty=0 endx=1.8 endy=1.8 name='line2'"
+laser "addline startx=1.8 starty=1.8 endx=0 endy=1.8 name='line3'"
+laser "addline startx=0 starty=1.8 endx=0 endy=0 name='line4'"
+laser "setinitpose x=0.95 y=1 th=0"
+laser "setinitcov Cx=1 Cy=1 Cth=1"
+laser "localize"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
