@@ -1,0 +1,29 @@
+<launch>
+ 
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="move_forward_only" default="false"/>
+ 
+ 
+  <arg name="initial_pose_x" default="-2.0"/>
+  <arg name="initial_pose_y" default="-0.5"/>
+  <arg name="initial_pose_a" default="0.0"/>
+ 
+  <param name="/use_sim_time" value="true"/>
+ 
+  <!--  ****** Maps *****  -->
+  <arg name="map_file" default="$(find hello_ros)/maps/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+ 
+  <!-- AMCL -->
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch">
+    <arg name="initial_pose_x" value="$(arg initial_pose_x)" />
+    <arg name="initial_pose_y" value="$(arg initial_pose_y)" />
+    <arg name="initial_pose_a" value="$(arg initial_pose_a)" />
+  </include>
+ 
+   <!--  ************** Navigation  ***************  -->
+  <include file="$(find hello_ros)/urdf/move_base.launch.xml">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+</launch>

@@ -1,0 +1,25 @@
+arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - hip
+    - shoulder
+    - elbow
+    - wrist
+/gazebo_ros_control:
+  pid_gains:
+    hip:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    shoulder:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    elbow:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    wrist:
+      p: 100.0
+      i: 0.01
+      d: 10.0

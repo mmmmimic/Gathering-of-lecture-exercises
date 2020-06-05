@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name=cube>
+    <static>false</static>
+      <link name='link'>
+
+        <inertial>
+          <mass>0.0041667</mass>
+          <inertia>
+            <ixx>0.0000216667</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0000216667</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.000013333</izz>
+          </inertia>
+        </inertial>
+      <collision name='collision'>
+        <geometry>
+          <box><size>0.05 0.05 0.05</size></box>
+        </geometry>
+    
+        <surface>
+          <friction>
+            <ode>
+              <mu>500</mu>
+              <mu2>500</mu2>
+              <fdir1>0.000000 0.000000 0.000000</fdir1>
+              <slip1>0.000000</slip1>
+              <slip2>0.000000</slip2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.000000</restitution_coefficient>
+            <threshold>100000.000000</threshold>
+          </bounce>
+          <contact>
+            <ode>
+              <soft_cfm>0.000000</soft_cfm>
+              <soft_erp>0.200000</soft_erp>
+              <kp>10000000</kp>
+              <kd>1</kd>
+              <max_vel>100.000000</max_vel>
+              <min_depth>0.001000</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <box><size>0.05 0.05 0.05</size></box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri> 
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+ 
+</sdf>
