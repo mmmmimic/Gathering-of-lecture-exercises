@@ -48,10 +48,9 @@
 ## 31390 Unmanned Autonomous Systems
 | Exercise   | Topic |
 | ---------- | --- |
-| week0| Simulation|
-| week1 |   |
-| week2 |  |
-| week3| |
+| part1 | Rotation  |
+| part2 | Modeling|
+| part3| |
 ## 31391 Software Framework for Autonomous Robots
 | Exercise   | Topic |
 | ---------- | --- |
