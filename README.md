@@ -50,7 +50,7 @@
 | ---------- | --- |
 | part1 | Rotation  |
 | part2 | Modeling|
-| part3| |
+| part3| Control|
 ## 31391 Software Framework for Autonomous Robots
 | Exercise   | Topic |
 | ---------- | --- |
