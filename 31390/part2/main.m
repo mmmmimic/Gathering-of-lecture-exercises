@@ -120,7 +120,6 @@ plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
 title("Position");
-pp = p;
 %% Exercise 2.3
 % INPUT
 % U1 = k*sum(OMEGA.^2);
