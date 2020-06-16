@@ -59,15 +59,18 @@ path_len = length(route)-1;
 %
 %% Exercise 4.3
 %// Dijkstra's algorithm
+% generate Adjacency Matrix D
 dist = [4.5, 5.4, 2.2, 2.2, 4.2, 3.6, 3.2, 2.2, 3.2, 1.4, 2.2, ...
     2, 1.4, 2.2, 2.2, 3.2, 6, 3, 4, 4.1, 6, 3.2, 5.1, 1.4, ...
     2, 3.2, 2.2, 4, 3.6, 4.1, 3.2, 3.6, 4.5, 2.8, 3.6, 3.6, 2, 3.2];
-D = 0*M;
+D = zeros(size(M, 1));
 for i = 1:size(s, 2)
    D(s(i), t(i)) = dist(i); 
    D(t(i), s(i)) = dist(i); 
 end
-
+start_node = 0;
+end_node = 23;
+[route, logs] = Dijkstra(start_node, end_node, M, D);
 %%
 function [mtx] = compress(s, t)
 % compress the graph into a matrix
