@@ -51,6 +51,7 @@
 | part1 | Rotation  |
 | part2 | Modeling|
 | part3| Control|
+| part4|Path Planning|
 ## 31391 Software Framework for Autonomous Robots
 | Exercise   | Topic |
 | ---------- | --- |
