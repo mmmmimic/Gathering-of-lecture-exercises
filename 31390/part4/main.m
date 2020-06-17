@@ -8,10 +8,10 @@ addpath('/Gathering-of-lectures-and-exercises/31390/part4/Astar/');
 %%
 %// draw the graph
 s = [0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 5, ...
-    6, 7, 7, 8, 8, 9, 9, 10, 11, 11, 12, 12, 14, ...
+    6, 7, 7, 8, 8, 9, 9, 10, 11, 11, 12, 12, 13, 14, ...
     14, 15, 15, 16, 17, 17, 17, 18, 19, 19, 20, 22, 23, 23]+1;
 t = [1, 2, 3, 4, 2, 5, 6, 7, 8, 5, 9, ...
-    10, 6, 11, 7, 11, 12, 13, 13, 14, 15, 16, 23, 15, ...
+    10, 6, 11, 7, 11, 12, 13, 13, 14, 15, 16, 23, 18, 15, ...
     18, 19, 20, 21, 12, 19, 23, 17, 20, 23, 22, 21, 21, 22]+1;
 G = graph(s, t);
 figure;
@@ -61,7 +61,7 @@ path_len = length(route)-1;
 %// Dijkstra's algorithm
 % generate Adjacency Matrix D
 dist = [4.5, 5.4, 2.2, 2.2, 4.2, 3.6, 3.2, 2.2, 3.2, 1.4, 2.2, ...
-    2, 1.4, 2.2, 2.2, 3.2, 6, 3, 4, 4.1, 6, 3.2, 5.1, 1.4, ...
+    2, 1.4, 2.2, 2.2, 3.2, 6, 3, 4, 4.1, 6, 3.2, 5.1, 3.2, 1.4, ...
     2, 3.2, 2.2, 4, 3.6, 4.1, 3.2, 3.6, 4.5, 2.8, 3.6, 3.6, 2, 3.2];
 D = zeros(size(M, 1));
 for i = 1:size(s, 2)
@@ -71,6 +71,23 @@ end
 start_node = 0;
 end_node = 23;
 [route, logs] = Dijkstra(start_node, end_node, M, D);
+%% Exercise 4.4
+%// (Greedy) Best First Search
+G = [17, 15.5, 11, 15.1, 13.4, 10.8, 10.2, 12.4, 15.2, 8.6, 6.7, 11.7, 5.1, 7.3, ...
+    6.7, 6.7, 4.5, 3.2, 5.1, 2.8, 7.1, 2, 3.2, 0];
+start_node = 0;
+end_node = 23;
+[route, logs] = greedy(start_node, end_node, M, G);
+%% Exercise 4.5
+%// A* search algorithm
+start_node = 0;
+end_node = 23;
+[route, logs] = Astar(start_node, end_node, M, G, D);
+%% Exercise 4.6
+%@http://aandds.com/blog/algorithm-a-star.html
+%% Exercise 4.7
+% // greedy_2d
+map_2d
 %%
 function [mtx] = compress(s, t)
 % compress the graph into a matrix
