@@ -4,7 +4,8 @@ classdef node
         parent
         % The position of the node
         position
-        
+        % visitied
+        v
         % The values which the node uses to calculate
         g
         h

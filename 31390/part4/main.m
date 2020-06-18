@@ -91,6 +91,9 @@ map_2d
 %% Exercise 4.8
 % // greedy_3d
 map_3d
+%% Exercise 4.11
+% // rfbs
+[route, logs] = rbfs(start_node, end_node, M, H, D);
 %%
 function [mtx] = compress(s, t)
 % compress the graph into a matrix
