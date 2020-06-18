@@ -1,4 +1,4 @@
-function [ route ] = greedy_2d( map, start, end_, length_cost )
+function [ route ] = astar_2d( map, start, end_, length_cost)
     % Check if length_cost was given
     if ~exist('length_cost', 'var')
         length_cost = 1;
@@ -20,7 +20,9 @@ function [ route ] = greedy_2d( map, start, end_, length_cost )
     parent_node = node;
     parent_node.position = start;
     parent_node.h = parent_node.calc_dist(end_);
-    parent_node.f = parent_node.h;
+    parent_node.g = 0;
+    parent_node.f = parent_node.h+parent_node.g;
+
 
     % Flag used to skip nodes which is already added
     continue_flag = 0;
@@ -76,8 +78,10 @@ function [ route ] = greedy_2d( map, start, end_, length_cost )
                             % Calculate the distance from the node
                             % to the end point
                             temp_node.h = temp_node.calc_dist(end_);
+                            % update g
+                            temp_node.g = parent_node.g+sqrt(x^2+y^2);
                             % Calculate the total cost of the node
-                            temp_node.f = temp_node.h;
+                            temp_node.f = temp_node.h+temp_node.g;
 
                             % Add the node to the children array
                             % Check if it is the first child

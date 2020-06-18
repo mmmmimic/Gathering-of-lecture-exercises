@@ -26,9 +26,9 @@ map = gen_square3d([6 7; 8 9; 9 11], map);
 map = gen_square3d([8 9; 2 11; 1 11], map);
 
 %% Run the algorithm to optain the route
-route = greedy_3d(map, start, end_);
-
-
+%route = greedy_3d(map, start, end_);
+%route = astar_3d(map, start, end_);
+route = weighted_astar_3d(map, start, end_);
 %% Draw the map
 % Draw a figure to show the map and process
 hold off
@@ -40,8 +40,7 @@ hold on
 
 % Mark the end with red
 scatter3(end_(1)+0.5, end_(2)+0.5, end_(3)+0.5, ...
-         500, [1,0,0], 'filled')
-hold on
+         500, [1,0,0], 'filled');hold on;
 
 % Draw the obstacles
 map = gen_square3d([2 3; 1 10; 1 11], map, 1);

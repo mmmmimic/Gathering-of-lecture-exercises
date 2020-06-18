@@ -70,24 +70,27 @@ for i = 1:size(s, 2)
 end
 start_node = 0;
 end_node = 23;
-[route, logs] = Dijkstra(start_node, end_node, M, D);
+[route, logs, g1] = Dijkstra(start_node, end_node, M, D);
 %% Exercise 4.4
 %// (Greedy) Best First Search
-G = [17, 15.5, 11, 15.1, 13.4, 10.8, 10.2, 12.4, 15.2, 8.6, 6.7, 11.7, 5.1, 7.3, ...
+H = [17, 15.5, 11, 15.1, 13.4, 10.8, 10.2, 12.4, 15.2, 8.6, 6.7, 11.7, 5.1, 7.3, ...
     6.7, 6.7, 4.5, 3.2, 5.1, 2.8, 7.1, 2, 3.2, 0];
 start_node = 0;
 end_node = 23;
-[route, logs] = greedy(start_node, end_node, M, G);
+[route, logs] = greedy(start_node, end_node, M, H);
 %% Exercise 4.5
 %// A* search algorithm
 start_node = 0;
 end_node = 23;
-[route, logs] = Astar(start_node, end_node, M, G, D);
+[route, logs, g2] = Astar(start_node, end_node, M, H, D);
 %% Exercise 4.6
 %@http://aandds.com/blog/algorithm-a-star.html
 %% Exercise 4.7
 % // greedy_2d
 map_2d
+%% Exercise 4.8
+% // greedy_3d
+map_3d
 %%
 function [mtx] = compress(s, t)
 % compress the graph into a matrix

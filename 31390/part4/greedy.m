@@ -1,5 +1,5 @@
-function [route, logs, dist] = greedy(start_node, end_node, map, G)
-% Breadth First Search
+function [route, logs] = greedy(start_node, end_node, map, G)
+% Best First Search
 %//////////////////////////////////////////////////////////////////////////
 % (int) start_node
 % (int) end_node

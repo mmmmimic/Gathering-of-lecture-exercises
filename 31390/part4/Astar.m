@@ -1,11 +1,12 @@
-function [route, logs, dist] = Astar(start_node, end_node, map, G, D)
-% Breadth First Search
+function [route, logs, g] = Astar(start_node, end_node, map, H, D)
+%  A* Search
 %//////////////////////////////////////////////////////////////////////////
-% (int) start_node
-% (int) end_node
-% (mtx) map
-% (mtx) G
-% (mtx) D
+% (int) start_node series number
+% (int) end_node series number
+% (mtx) map, adjacent matrix of the graph, 24x24
+% (mtx) H: Huristic matrix, 1x24
+% (mtx) D: path length matrix, 24x24, D(m, n) returns the distance
+% between node m and n
 %**************************************************************************
 start_node = start_node+1;
 end_node = end_node+1;
@@ -13,15 +14,18 @@ end_node = end_node+1;
 % before, set the flag to be 1
 flag = zeros(size(map, 1), 1);
 % create a queue to store the route
-s = stack();
+s = queue();
 s = s.push(start_node);
 % logs to store the searching history
 logs = [];
 % parents for nodes
 P = flag;
 % distance vector
-dist = Inf(1, size(map, 1));
-dist(1) = 0;
+g = Inf(1, size(map, 1));
+g(1) = 0;
+% F to store the lowest f
+F = Inf(1, size(map, 1));
+F(1) = H(1)+g(1);
 while ~isempty(s.data)
     % pop the frontier
     [front, s] = s.pop();
@@ -31,37 +35,37 @@ while ~isempty(s.data)
     end
     logs = [logs, front-1];
     % look for the connected nodes
-    [nodes, dist, P] = getNext(front, map, flag, D, dist, P, G);
-    % stack the nodes
-    s = s.push(nodes);
-end
-% find route
-route = findRoute(start_node, end_node, P);
-route = route-1;
-end
-function [nodes, dist, P] = getNext(front, map, flag, D, dist, P, G)
     nodes = [];
     for i = 1:size(map, 1)
+        if map(front, i) && (g(front)+D(front, i))<g(i)
+            g(i) = g(front)+D(front, i);
+            P(i) = front;
+        end
         if ~flag(i) && map(front, i)
             nodes = [nodes, i];
-            d = dist(front)+D(front, i)+G(i);
-            if d<dist(i)
-               dist(i) = d; 
-               P(i) = front;
+            f = g(i)+H(i);
+            if f<F(i)
+                F(i) = f;
+                P(i) = front;
             end
         end
     end
     % sort the nodes by distance
-    d = dist(nodes);
-    [~, idx] = sort(d, 'descend');
+    [~, idx] = sort(F(nodes));
     nodes = nodes(idx);
+    % stack the nodes
+    s = s.push(nodes);
 end
-function route = findRoute(start_node, end_node, P)
+% find route
+route = findRoute(end_node, P);
+route = route-1;
+end
+function route = findRoute(end_node, P)
 route = [];
 front = end_node;
-while front~=start_node
-   route = [front, route];
-   front = P(front);
+while P(front)
+    route = [front, route];
+    front = P(front);
 end
 route = [front, route];
 end
