@@ -58,4 +58,75 @@ xlabel('time/s');
 ylabel('acceleration/(m/s^2)');
 title('Acceleration');
 %% Exercise 5.3
-% // 
+% // Cox-de Boor recusion
+% compute the two first order functions N(0,1,t) and N(1,1,t)
+% show the lines
+order = 1;
+n1 = [];
+t = [];
+for i = 0:0.01:10
+    n1 = [n1, N(0, order, i)];
+    t = [t, i];
+end
+figure;
+plot(t, n1);
+hold on;
+n2 = [];
+t = [];
+for i = 0:0.01:10
+    n2 = [n2, N(1, order, i)];
+    t = [t, i];
+end
+plot(t, n2);
+xlabel('x');
+ylabel('y');
+% combine them linearly
+% we need to calculate weight
+A = [N(0,order,1), N(0,order,2);N(1,order,1),N(1,order,2)];
+B = [2, 3];
+W = B*pinv(A);
+% the line we want
+figure;
+n3 = [];
+t = [];
+for i = 1:0.01:2
+    n3 = [n3, W*[N(0,order,i);N(1,order,i)]];
+    t = [t, i];
+end
+plot(t, n3);
+xlabel('x');
+ylabel('y');
+
+%% Exercise 5.4
+syms psi theta phi
+Rx = [1 0 0;
+    0 cos(phi) -sin(phi);
+    0 sin(phi) cos(phi)];
+Ry = [cos(theta) 0 sin(theta);
+    0 1 0;
+    -sin(theta) 0 cos(theta)];
+Rz = [cos(psi) -sin(psi) 0;
+    sin(psi) cos(psi) 0;
+    0 0 1];
+zB = simplify(Rz*Ry*Rx*[0;0;1]);
+xC = simplify(Rz*[1;0;0]);
+yB = simplify(Rz*Ry*Rx*[0;1;0]);
+YB = simplify(cross(zB, xC));
+transpose(xC)*YB
+% it's 0, perpendicular proved
+%% Exercise 5.5
+
+%%
+function n = N(i, p, t)
+% since t_i = i
+if p==0
+ if i<=t && t<(i+1)
+    n = 1;
+    return;
+else
+    n = 0;
+    return;
+end   
+end
+n = (t-i)/p*N(i, p-1, t)+(i+p+1-t)/p*N(i+1, p-1, t);
+end
