@@ -52,6 +52,8 @@
 | part2 | Modeling|
 | part3| Control|
 | part4|Path Planning|
+|part5|Trajectory Planning|
+|part6|Simulation|
 ## 31391 Software Framework for Autonomous Robots
 | Exercise   | Topic |
 | ---------- | --- |
