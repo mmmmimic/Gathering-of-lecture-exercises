@@ -87,33 +87,33 @@ for i = 1:iter
         0,sin(Euler(1))/cos(Euler(2)), cos(Euler(1))/cos(Euler(2))]*w;
     dE(:,i) = dEuler;
     Euler = Euler+dEuler*samp_time;
-    Euler(1) = wrapTo2Pi(Euler(1));
-    Euler(2) = wrapTo2Pi(Euler(2));
-    Euler(3) = wrapTo2Pi(Euler(3));
+    Euler(1) = wrapToPi(Euler(1));
+    Euler(2) = wrapToPi(Euler(2));
+    Euler(3) = wrapToPi(Euler(3));
     ORIENTATION = [ORIENTATION,Euler];
 end
 % show the result
-figure;
-subplot(2,1,1);
-plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
-xlabel('w_x');
-ylabel('w_y');
-zlabel('w_z');
-xlim([0,2*pi]);
-ylim([0,2*pi]);
-zlim([0,2*pi]);
-title("Orientation");
-grid on;
-subplot(2,1,2);
-plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
-xlabel('x');
-ylabel('y');
-zlabel('z');
-xlim([-lim,lim]);
-ylim([-lim,lim]);
-zlim([-lim,lim]);
-grid on;
-title("Position");
+% figure;
+% subplot(2,1,1);
+% plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
+% xlabel('w_x');
+% ylabel('w_y');
+% zlabel('w_z');
+% xlim([0,2*pi]);
+% ylim([0,2*pi]);
+% zlim([0,2*pi]);
+% title("Orientation");
+% grid on;
+% subplot(2,1,2);
+% plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
+% xlabel('x');
+% ylabel('y');
+% zlabel('z');
+% xlim([-lim,lim]);
+% ylim([-lim,lim]);
+% zlim([-lim,lim]);
+% grid on;
+% title("Position");
 
 figure;
 subplot(2,1,1);
@@ -124,7 +124,8 @@ hold on;
 plot([0:iter]*samp_time,ORIENTATION(3,:));
 xlabel('time/s');
 ylabel('radian');
-ylim([0,2*pi]);
+ylim([-pi,pi]);
+legend('phi', 'theta', 'psi');
 title("Orientation");
 subplot(2,1,2);
 plot([0:iter]*samp_time,POSITION(1,:));
@@ -134,6 +135,7 @@ hold on;
 plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
+legend('x', 'y', 'z');
 title("Position");
 %% Exercise 3.2
 %%
@@ -222,33 +224,33 @@ for i = 1:iter
         0,dEuler(1), 1]*w;
     dE(:,i) = dEuler;
     Euler = Euler+dEuler*samp_time;
-    Euler(1) = wrapTo2Pi(Euler(1));
-    Euler(2) = wrapTo2Pi(Euler(2));
-    Euler(3) = wrapTo2Pi(Euler(3));
+    Euler(1) = wrapToPi(Euler(1));
+    Euler(2) = wrapToPi(Euler(2));
+    Euler(3) = wrapToPi(Euler(3));
     ORIENTATION = [ORIENTATION,Euler];
 end
 % show the result
-figure;
-subplot(2,1,1);
-plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
-xlabel('w_x');
-ylabel('w_y');
-zlabel('w_z');
-xlim([0,2*pi]);
-ylim([0,2*pi]);
-zlim([0,2*pi]);
-title("Orientation");
-grid on;
-subplot(2,1,2);
-plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
-xlabel('x');
-ylabel('y');
-zlabel('z');
-xlim([-lim,lim]);
-ylim([-lim,lim]);
-zlim([-lim,lim]);
-grid on;
-title("Position");
+% figure;
+% subplot(2,1,1);
+% plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
+% xlabel('w_x');
+% ylabel('w_y');
+% zlabel('w_z');
+% xlim([0,2*pi]);
+% ylim([0,2*pi]);
+% zlim([0,2*pi]);
+% title("Orientation");
+% grid on;
+% subplot(2,1,2);
+% plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
+% xlabel('x');
+% ylabel('y');
+% zlabel('z');
+% xlim([-lim,lim]);
+% ylim([-lim,lim]);
+% zlim([-lim,lim]);
+% grid on;
+% title("Position");
 
 figure;
 subplot(2,1,1);
@@ -259,8 +261,9 @@ hold on;
 plot([0:iter]*samp_time,ORIENTATION(3,:));
 xlabel('time/s');
 ylabel('radian');
-ylim([0,2*pi]);
+ylim([-pi,pi]);
 title("Orientation");
+legend('phi', 'theta', 'psi');
 subplot(2,1,2);
 plot([0:iter]*samp_time,POSITION(1,:));
 hold on;
@@ -270,6 +273,7 @@ plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
 title("Position");
+legend('x', 'y', 'z');
 
 %% Exercise 3.3
 %%
@@ -304,10 +308,14 @@ k_d = 1;
 k_pa = 0.9;
 k_ia = 0;
 k_da = 1.1;
+
 % // x PID cofficients
-k_px = 0.01;
+% k_px = 0.01;
+% k_ix = 0;
+% k_dx = 0.05;
+k_px = 0.008;
 k_ix = 0;
-k_dx = 0.05;
+k_dx = 0.04;
 
 % //initialization
 m = 0.5;
@@ -319,7 +327,7 @@ I = diag([3e-6, 3e-6, 1e-5]);
 g = [0;0;-9.81];
 
 %// simulation param
-running_time = 10; %run the model for 0.5 second
+running_time = 30; %run the model for 0.5 second
 samp_time = 1e-2;
 
 % iteration
@@ -370,33 +378,33 @@ for i = 1:iter
         0,sin(Euler(1))/cos(Euler(2)), cos(Euler(1))/cos(Euler(2))]*w;
     dE(:,i) = dEuler;
     Euler = Euler+dEuler*samp_time;
-    Euler(1) = wrapTo2Pi(Euler(1));
-    Euler(2) = wrapTo2Pi(Euler(2));
-    Euler(3) = wrapTo2Pi(Euler(3));
+    Euler(1) = wrapToPi(Euler(1));
+    Euler(2) = wrapToPi(Euler(2));
+    Euler(3) = wrapToPi(Euler(3));
     ORIENTATION = [ORIENTATION,Euler];
 end
-% show the result
-figure;
-subplot(2,1,1);
-plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
-xlabel('w_x');
-ylabel('w_y');
-zlabel('w_z');
-xlim([0,2*pi]);
-ylim([0,2*pi]);
-zlim([0,2*pi]);
-title("Orientation");
-grid on;
-subplot(2,1,2);
-plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
-xlabel('x');
-ylabel('y');
-zlabel('z');
-xlim([-lim,lim]);
-ylim([-lim,lim]);
-zlim([-lim,lim]);
-grid on;
-title("Position");
+% % show the result
+% figure;
+% subplot(2,1,1);
+% plot3(ORIENTATION(1,:), ORIENTATION(2,:), ORIENTATION(3,:));
+% xlabel('w_x');
+% ylabel('w_y');
+% zlabel('w_z');
+% xlim([0,2*pi]);
+% ylim([0,2*pi]);
+% zlim([0,2*pi]);
+% title("Orientation");
+% grid on;
+% subplot(2,1,2);
+% plot3(POSITION(1,:), POSITION(2,:), POSITION(3,:));
+% xlabel('x');
+% ylabel('y');
+% zlabel('z');
+% xlim([-lim,lim]);
+% ylim([-lim,lim]);
+% zlim([-lim,lim]);
+% grid on;
+% title("Position");
 
 figure;
 subplot(2,1,1);
@@ -407,8 +415,9 @@ hold on;
 plot([0:iter]*samp_time,ORIENTATION(3,:));
 xlabel('time/s');
 ylabel('radian');
-ylim([0,2*pi]);
+ylim([-pi,pi]);
 title("Orientation");
+legend('phi', 'theta', 'psi');
 subplot(2,1,2);
 plot([0:iter]*samp_time,POSITION(1,:));
 hold on;
@@ -418,3 +427,4 @@ plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
 title("Position");
+legend('x', 'y', 'z');

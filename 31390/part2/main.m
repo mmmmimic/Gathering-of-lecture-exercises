@@ -26,12 +26,12 @@ R = simplify(rotz(psi)*roty(theta)*rotx(phi));
 %%
 %// inputs
 % static: 11.0736x4
-OMEGA = [1000;0;1000;0];
+OMEGA = [0;10000;0;10000];
 %// plot param
 lim = 1e-2;
 %// simulation param
-running_time = 10; %run the model for 0.5 second
-samp_time = 1e-2;
+running_time = 1e-2;
+samp_time = 1e-3;
 % initialization
 m = 0.5;
 L = 0.225;
@@ -72,9 +72,9 @@ for i = 1:iter
         0, cos(Euler(1)), -sin(Euler(1));
         0,sin(Euler(1))/cos(Euler(2)), cos(Euler(1))/cos(Euler(2))]*w;
     Euler = Euler+dEuler*samp_time;
-    Euler(1) = wrapTo2Pi(Euler(1));
-    Euler(2) = wrapTo2Pi(Euler(2));
-    Euler(3) = wrapTo2Pi(Euler(3));
+    Euler(1) = wrapToPi(Euler(1));
+    Euler(2) = wrapToPi(Euler(2));
+    Euler(3) = wrapToPi(Euler(3));
     ORIENTATION = [ORIENTATION,Euler];
 end
 
@@ -109,7 +109,8 @@ hold on;
 plot([0:iter]*samp_time,ORIENTATION(3,:));
 xlabel('time/s');
 ylabel('radian');
-ylim([0,2*pi]);
+legend('phi', 'theta', 'psi');
+ylim([-pi,pi]);
 title("Orientation");
 subplot(2,1,2);
 plot([0:iter]*samp_time,POSITION(1,:));
@@ -119,6 +120,7 @@ hold on;
 plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
+legend('x', 'y', 'z');
 title("Position");
 %% Exercise 2.3
 % INPUT
@@ -168,12 +170,12 @@ title("Position");
 %%
 %// inputs
 % static: 11.0736x4
-OMEGA = [1000;0;1000;0];
+OMEGA = [0;10000;0;10000];
 %// plot param
 lim = 1e-2;
 %// simulation param
-running_time = 10; %run the model for 0.5 second
-samp_time = 1e-2;
+running_time = 1e-2;
+samp_time = 1e-3;
 % initialization
 m = 0.5;
 L = 0.225;
@@ -215,9 +217,9 @@ for i = 1:iter
         0, 1, -dEuler(1);
         0,dEuler(1), 1]*w;
     Euler = Euler+dEuler*samp_time;
-    Euler(1) = wrapTo2Pi(Euler(1));
-    Euler(2) = wrapTo2Pi(Euler(2));
-    Euler(3) = wrapTo2Pi(Euler(3));
+    Euler(1) = wrapToPi(Euler(1));
+    Euler(2) = wrapToPi(Euler(2));
+    Euler(3) = wrapToPi(Euler(3));
     ORIENTATION = [ORIENTATION,Euler];
 end
 
@@ -252,7 +254,8 @@ hold on;
 plot([0:iter]*samp_time,ORIENTATION(3,:));
 xlabel('time/s');
 ylabel('radian');
-ylim([0,2*pi]);
+ylim([-pi,pi]);
+legend('phi', 'theta', 'psi');
 title("Orientation");
 subplot(2,1,2);
 plot([0:iter]*samp_time,POSITION(1,:));
@@ -262,4 +265,5 @@ hold on;
 plot([0:iter]*samp_time,POSITION(3,:));
 xlabel('time/s');
 ylabel('meter');
+legend('x', 'y', 'z');
 title("Position");
