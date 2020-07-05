@@ -18,7 +18,8 @@ classdef stack
         
         function [d, obj] = pop(obj)
            d = obj.data(end);
-           obj.data = obj.data(1:end-1);
+           %obj.data = obj.data(1:end-1);
+           obj.data(obj.data==d) = [];
         end
             
     end

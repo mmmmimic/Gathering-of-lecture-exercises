@@ -30,11 +30,11 @@ while ~isempty(s.data)
     nodes = [];
     nodes = getNext(front, map, flag, nodes);
     if ~isempty(nodes)
-       for i  = 1:size(nodes, 2)
-           if ~fork(nodes(i))
-              fork(nodes(i)) = front; 
-           end
-       end
+        for i  = 1:size(nodes, 2)
+            if ~fork(nodes(i))
+                fork(nodes(i)) = front;
+            end
+        end
     end
     % stack the nodes
     s = s.push(nodes);
@@ -44,21 +44,21 @@ route = findRoute(start_node, end_node, fork);
 route = route-1;
 end
 function nodes = getNext(front, map, flag, nodes)
-    for i = 1:size(map, 1)
-        if ~flag(i) && map(front, i)
-            % start by stacking the lowest of the s numbers
-            nodes = [nodes, i];
-            % start by stacking the highest of the s numbers
-            %nodes = [i, nodes];
-        end
+for i = 1:size(map, 1)
+    if ~flag(i) && map(front, i)
+        % start by stacking the lowest of the s numbers
+        nodes = [nodes, i];
+        % start by stacking the highest of the s numbers
+        %nodes = [i, nodes];
     end
+end
 end
 function route = findRoute(start_node, end_node, fork)
 route = [];
 front = end_node;
 while front~=start_node
-   route = [front, route];
-   front = fork(front);
+    route = [front, route];
+    front = fork(front);
 end
 route = [front, route];
 end

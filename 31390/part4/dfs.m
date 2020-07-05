@@ -54,9 +54,9 @@ function nodes = getNext(front, map, flag, nodes)
     for i = 1:size(map, 1)
         if ~flag(i) && map(front, i)
             % start by stacking the lowest of the s numbers
-            nodes = [nodes, i];
+            %nodes = [nodes, i];
             % start by stacking the highest of the s numbers
-            %nodes = [i, nodes];
+            nodes = [i, nodes];
         end
     end
 end

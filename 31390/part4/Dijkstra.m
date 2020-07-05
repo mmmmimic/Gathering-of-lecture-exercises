@@ -1,4 +1,4 @@
-function [route, logs, g] = Dijkstra(start_node, end_node, map, D)
+function [route, logs, G] = Dijkstra(start_node, end_node, map, D)
 % Dijkstra's algorithm
 %//////////////////////////////////////////////////////////////////////////
 % (int) start_node
@@ -21,6 +21,7 @@ P = flag;
 % distance vector
 g = Inf(1, size(map, 1));
 g(1) = 0;
+G = [];
 while ~isempty(s.data)
     % pop the frontier
     [front, s] = s.pop();
@@ -45,6 +46,7 @@ while ~isempty(s.data)
     nodes = nodes(idx);
     % stack the nodes
     s = s.push(nodes);
+    G = [G;g];
 end
 % find route
 route = findRoute(end_node, P);

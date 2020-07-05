@@ -96,38 +96,32 @@ map_3d
 [route, logs] = rbfs(start_node, end_node, M, H, D);
 %%
 figure;
-subplot(2,2,1);
+subplot(2,2,1)
 for i = 1:6
     plot([1:24],g1(:,i)');
     hold on;
 end
 set(gca, 'ylim', [0,12], 'xlim', [1, 24]);
-legend('node0', 'node1', 'node2', 'node3', 'node4','node5');
-subplot(2,2,2);
+legend('node0', 'node1', 'node2', 'node3', 'node4',...
+ 'node5');
+subplot(2,2,2)
 for i = 7:12
     plot([1:24],g1(:,i)');
     hold on;
 end
 set(gca, 'ylim', [0,12], 'xlim', [1, 24]);
-legend('node6', 'node7', 'node8', 'node9','node10', 'node11');
-subplot(2,2,3);
-for i = 13:18
-    plot([1:24],g1(:,i)');
-    hold on;
-end
-set(gca, 'ylim', [0,20], 'xlim', [1, 24]);
-legend('node12', 'node13','node14', 'node15', 'node16', 'node17');
-subplot(2,2,4);
-for i = 19:24
-    plot([1:24],g1(:,i)');
-    hold on;
-end
-set(gca, 'ylim', [0,20], 'xlim', [1, 24]);
-legend('node18','node19', 'node20', 'node21', 'node22', 'node23');
+legend('node6', 'node7', 'node8', 'node9',...
+'node10', 'node11');
 %%
-plot(g1(end,:));
-xlabel('node');
-ylabel('distance');
+figure;
+for i = 13:24
+    plot([1:24],g1(:,i)');
+    hold on;
+end
+set(gca, 'ylim', [0,20], 'xlim', [1, 24]);
+legend('''node13',...
+ 'node14', 'node15', 'node16', 'node17', 'node18',...
+ 'node19', 'node20', 'node21', 'node22', 'node23');
 %%
 function [mtx] = compress(s, t)
 % compress the graph into a matrix

@@ -18,7 +18,8 @@ classdef queue
         
         function [d, obj] = pop(obj)
            d = obj.data(1);
-           obj.data = obj.data(2:end);
+           %obj.data = obj.data(2:end);
+           obj.data(obj.data==d) = [];
         end
             
     end
