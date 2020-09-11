@@ -17,13 +17,13 @@ plot(x,y);
 myFuncd = @(x) 1-x.^-1;
 myFuncdd = @(x) x.^-2;
 figure;
-subplot(3,1,1);
+subplot(1,3,1);
 plot(x,y);
 title('function');
-subplot(3,1,2);
+subplot(1,3,2);
 plot(x,myFuncd(x));
 title('1st-order derivatons');
-subplot(3,1,3);
+subplot(1,3,3);
 plot(x,myFuncdd(x));
 title('2nd-order derivations');
 %% 1.1 is the function convex?
@@ -57,7 +57,7 @@ figure;
 subplot(1,2,1);
 mesh(X,Y,y);
 subplot(1,2,2);
-v = [0:2:10 10:5:100 100:20:200];
+v = [-20:20];
 [c,h] = contour(x1,x2,y,v,'linewidth',2);
 color bar, axis image,
 xlabel('x1');

@@ -9,8 +9,8 @@ clear all; close all; clc;
 % a和b取何值令f(x)有且只有一个最优解？
 % x1 = x2 = (2-a)/(9+(1+a)^2)
 % eigen value is (2-a) or (4+a)
-% -4<=a<=2
-
+% my answer: -4<=a<=2
+% solution: a neq 2 or a neq -4
 %%
 % f(x) = 1/2*x^T*Q*x-b^T*x
 % dx = Q*x-b^T = 0
@@ -19,6 +19,7 @@ clear all; close all; clc;
 %%
 % min(b^T*x)
 % df(x) = b inequal 0
-% doesn't meet the optimization necessary condition
+% my answer: doesn't meet the optimization necessary condition
+% 这就是一个一次函数，minimizer就是和\Omega的交点
 
 %%

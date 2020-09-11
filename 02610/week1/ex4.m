@@ -176,5 +176,5 @@ title('2-nd order derivation');
 % the equal constrainit function is linear
 % the inequal constraint function is concave
 % f(x) = x*log(x) is convex (negative entrophy)
-% x is convex, thus this is not a convex problem
+% x is convex, thus this is a convex problem
 
