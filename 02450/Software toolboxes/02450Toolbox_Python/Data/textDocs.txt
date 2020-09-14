@@ -1,0 +1,13 @@
+The Google matrix P is a model of the internet
+
+
+P_ij is nonzero if there is a link from webpage i to j
+
+
+The Google matrix is used to rank all Web pages
+
+
+The ranking is done by solving a matrix eigenvalue problem
+
+
+England dropped out of the top 10 in the FIFA ranking

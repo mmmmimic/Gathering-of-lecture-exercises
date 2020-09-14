@@ -1,0 +1,33 @@
+messy_data
+mpg	cylinders	displacement	horsepower	weight	acceleration	modelyear	origin	carname
+mpg	cyl	disp	hp	w	acc	yr	org	name
+18	8	?	130	3'504	12.0	70	1	chevrolet chevelle malibu
+15	8	350	165	3'693	11,5	70	1	buick skylark 320
+18	8	?	150	3'436	11.0	70	1	plymouth satellite
+16	8	?	150	3'433	12.0	70	1	amc rebel sst
+17	8	0	140	3'449	10,5	70	1	ford torino
+15	8	429	198	4'341	10.0	70	1	ford galaxie 500
+14	8	454	220	4'354	9.0	70	1	chevrolet impala
+14	8	?	215	4312	8,5	70	1	plymouth fury iii
+14	8	455	225	4425	10.0	70	1	pontiac catalina
+15	8	390	190	3'850	8,5	70	1	amc ambassador dpl
+15	8	0	170	3'563	10.0	70	1	dodge challenger se
+14	8	?	160	3'609	8.0	70	1	plymouth 'cuda 340
+99	8	?	150	3'761	9,5	70	1	chevrolet monte carlo
+14	8	?	225	3'086	10.0	70	1	buick estate wagon (sw)
+24	4	113	95	2'372	15.0	70	3	toyota corona mark ii
+22	6		95	2'833	15,5	70	1	plymouth duster
+0	6	199	97	2'774	15,5	70	1	amc hornet
+21	6	?	85	2'587	16.0	70	1	ford maverick
+27	4	97	88	2'130	14,5	70	3	datsun pl510
+26	4		46	1'835	20,5	70	2	volkswagen 1131 deluxe sedan
+33	4	105	74	2190	14.2	81	2	volkswagen jetta
+33.7	4	107	75	2210	14.4	81	3	honda prelude
+32.4	4	108	75	2350	16.8	81	3	toyota corolla
+32.9	4	119	100	2615	14.8	81	3	datsun 200sx
+31.6	4	120	74	2635	18.3	81	3	mazda 626
+28.1	4	141	80	3'230	20.4	81	2	peugeot 505s turbo diesel
+30.7	6	145	76	3'160	19.6	81	2	volvo diesel
+0	6	168	116	2'900	12.6	81	3	toyota cressida
+24.2	6	146	120	2'930	13.8	81	3	datsun 810 maxima
+
