@@ -1,7 +1,7 @@
 # exercise 3.1.5
 import numpy as np
 import scipy.linalg as linalg
-from similarity import similarity
+# from similarity import similarity
 
 from ex3_1_4 import *
 
@@ -25,7 +25,7 @@ for i in range(N):
 sim = (q @ X.T).T / (np.sqrt(np.power(X,2).sum(axis=1)) * np.sqrt(np.power(q,2).sum()))
 
 # Method 3 (use the "similarity" function)
-sim = similarity(X, q, 'cos');
+# sim = similarity(X, q, 'cos');
 
 
 # Display the result
