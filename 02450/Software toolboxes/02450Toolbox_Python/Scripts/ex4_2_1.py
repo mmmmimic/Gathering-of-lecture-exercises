@@ -4,7 +4,7 @@ import numpy as np
 import xlrd
 
 # Load xls sheet with data
-doc = xlrd.open_workbook('../Data/iris.xls').sheet_by_index(0)
+doc = xlrd.open_workbook('Software toolboxes/02450ToolBox_Python/Data/iris.xls').sheet_by_index(0)
 
 # Extract attribute names
 attributeNames = doc.row_values(0,0,4)

@@ -4,6 +4,8 @@ from matplotlib.pyplot import (figure, subplot, plot, xlabel, ylabel,
                                xticks, yticks,legend,show)
 
 # requires data from exercise 4.2.1
+import sys
+sys.path.append('Software toolboxes/02450ToolBox_Python/Scripts/')
 from ex4_2_1 import *
 
 figure(figsize=(12,10))

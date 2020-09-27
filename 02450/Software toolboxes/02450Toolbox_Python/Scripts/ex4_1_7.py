@@ -13,7 +13,7 @@ ngen = 10
 
 # Load Matlab data file to python dict structure
 # and extract variables of interest
-traindata = loadmat('../Data/zipdata.mat')['traindata']
+traindata = loadmat('Software toolboxes/02450ToolBox_Python/Data/zipdata.mat')['traindata']
 X = traindata[:,1:]
 y = traindata[:,0]
 N, M = np.shape(X) #or X.shape

@@ -3,6 +3,8 @@
 from matplotlib.pyplot import figure, subplot, hist, xlabel, ylim, show
 import numpy as np
 # requires data from exercise 4.2.1
+import sys
+sys.path.append('Software toolboxes/02450ToolBox_Python/Scripts/')
 from ex4_2_1 import *
 
 figure(figsize=(8,7))

@@ -1,9 +1,11 @@
 # Exercise 4.2.6
 
-from matplotlib.pyplot import (figure, show, hold)
+from matplotlib.pyplot import (figure, show)
 from mpl_toolkits.mplot3d import Axes3D
 
 # requires data from exercise 4.1.1
+import sys
+sys.path.append('Software toolboxes/02450ToolBox_Python/Scripts/')
 from ex4_2_1 import *
 
 # Indices of the variables to plot

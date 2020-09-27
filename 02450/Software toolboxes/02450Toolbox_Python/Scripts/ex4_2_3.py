@@ -3,6 +3,8 @@
 from matplotlib.pyplot import boxplot, xticks, ylabel, title, show
 
 # requires data from exercise 4.2.1
+import sys
+sys.path.append('Software toolboxes/02450ToolBox_Python/Scripts/')
 from ex4_2_1 import *
 
 boxplot(X)

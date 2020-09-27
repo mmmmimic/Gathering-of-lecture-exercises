@@ -1,13 +1,13 @@
 # exercise 4.3.2
 
-from matplotlib.pyplot import (figure, hold, subplot, plot, legend, show, 
+from matplotlib.pyplot import (figure, subplot, plot, legend, show, 
                                xlabel, ylabel, xticks, yticks, boxplot, setp,title,ylim)
 import numpy as np
 from scipy.io import loadmat
 from scipy.stats import zscore
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine.mat')
+mat_data = loadmat('Software toolboxes/02450ToolBox_Python/Data/wine.mat')
 X = mat_data['X']
 y = np.squeeze(mat_data['y'])
 C = mat_data['C'][0,0]

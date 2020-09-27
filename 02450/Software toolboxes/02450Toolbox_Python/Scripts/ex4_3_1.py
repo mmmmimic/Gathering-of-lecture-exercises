@@ -7,7 +7,7 @@ from scipy.io import loadmat
 from scipy.stats import zscore
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine.mat')
+mat_data = loadmat('Software toolboxes/02450ToolBox_Python/Data/wine.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
 C = mat_data['C'][0,0]

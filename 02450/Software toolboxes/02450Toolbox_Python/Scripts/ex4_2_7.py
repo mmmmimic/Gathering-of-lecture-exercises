@@ -5,6 +5,8 @@ from matplotlib.pyplot import (figure, imshow, xticks, xlabel, ylabel, title,
 from scipy.stats import zscore
 
 # requires data from exercise 4.2.1
+import sys
+sys.path.append('Software toolboxes/02450ToolBox_Python/Scripts/')
 from ex4_2_1 import *
 
 X_standarized = zscore(X, ddof=1)
