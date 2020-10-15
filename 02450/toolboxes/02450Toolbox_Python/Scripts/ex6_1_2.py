@@ -18,7 +18,7 @@ C = len(classNames)
 tc = np.arange(2, 21, 1)
 
 # K-fold crossvalidation
-K = 10
+K = 100
 CV = model_selection.KFold(n_splits=K,shuffle=True)
 
 # Initialize variable
