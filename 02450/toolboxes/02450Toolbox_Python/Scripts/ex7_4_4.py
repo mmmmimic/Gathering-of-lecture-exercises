@@ -10,6 +10,8 @@ y = y.squeeze()
 # Naive Bayes classifier parameters
 alpha = 1.0 # pseudo-count, additive parameter (Laplace correction if 1.0 or Lidtstone smoothing otherwise)
 fit_prior = True   # uniform prior (change to True to estimate prior from data)
+# should be False in the beginning, then I changed it to True. The classification result is better. 
+# Because now it suits the data better: the gender is not normally distributed in the data. 
 
 # K-fold crossvalidation
 K = 10
@@ -43,6 +45,7 @@ for train_index, test_index in CV.split(X):
     nb_classifier = MultinomialNB(alpha=alpha,
                                   fit_prior=fit_prior)
     nb_classifier.fit(X_train, y_train)
+
     y_est_prob = nb_classifier.predict_proba(X_test)
     y_est = np.argmax(y_est_prob,1)
 

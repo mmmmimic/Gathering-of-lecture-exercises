@@ -65,6 +65,7 @@ def plot_autoencoder_stats(
 
     rows = 8
     batch_size = x.size(0)
+    print(batch_size)
     columns = batch_size // rows
 
     canvas = np.zeros((28 * rows, columns * 28))

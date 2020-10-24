@@ -2,6 +2,7 @@ from matplotlib.pyplot import figure, plot, xlabel, ylabel, show
 import numpy as np
 from scipy.io import loadmat
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn import model_selection
 
 # requires data from exercise 1.5.1
@@ -31,6 +32,8 @@ for train_index, test_index in CV.split(X, y):
     dy = []
     for l in L:
         knclassifier = KNeighborsClassifier(n_neighbors=l)
+        if l==20:
+            knclassifier = DecisionTreeClassifier()
         knclassifier.fit(X_train, y_train)
         y_est = knclassifier.predict(X_test)
 
@@ -43,5 +46,12 @@ for train_index, test_index in CV.split(X, y):
 
 yhat = np.concatenate(yhat)
 y_true = np.concatenate(y_true)
-yhat[:,0] # predictions made by first classifier.
+print(yhat[:,0]) # predictions made by first classifier.
 # Compute accuracy here.
+acc = np.sum([yhat[:,0]==y_true])
+print('MA: ', acc/yhat.shape[0])
+acc = np.sum([yhat[:,1]==y_true])
+print('MB: ', acc/yhat.shape[0])
+acc = np.sum([yhat[:,2]==y_true])
+print('MC: ', acc/yhat.shape[0])
+
