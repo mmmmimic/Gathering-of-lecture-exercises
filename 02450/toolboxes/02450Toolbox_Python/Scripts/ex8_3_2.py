@@ -6,7 +6,7 @@ import numpy as np
 import sklearn.linear_model as lm
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/synth1.mat')
+mat_data = loadmat('../Data/synth3.mat')
 X = mat_data['X']
 X = X - np.ones((X.shape[0],1)) * np.mean(X,0)
 X_train = mat_data['X_train']

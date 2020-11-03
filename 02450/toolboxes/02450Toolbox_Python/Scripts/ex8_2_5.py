@@ -21,7 +21,7 @@ C = 2
 X = stats.zscore(X);
 
 # Parameters for neural network classifier
-n_hidden_units = 2     # number of hidden units
+n_hidden_units = 1     # number of hidden units
 n_replicates = 2        # number of networks trained in each k-fold
 max_iter = 10000         # stop criterion 2 (max epochs in training)
 

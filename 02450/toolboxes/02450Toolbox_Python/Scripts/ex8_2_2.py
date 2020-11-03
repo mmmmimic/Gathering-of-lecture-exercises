@@ -39,13 +39,13 @@ color_list = ['tab:orange', 'tab:green', 'tab:purple', 'tab:brown', 'tab:pink',
               'tab:gray', 'tab:olive', 'tab:cyan', 'tab:red', 'tab:blue']
 
 # Define the model structure
-n_hidden_units = 1 # number of hidden units in the signle hidden layer
+n_hidden_units = 10 # number of hidden units in the single hidden layer
 # The lambda-syntax defines an anonymous function, which is used here to 
 # make it easy to make new networks within each cross validation fold
 model = lambda: torch.nn.Sequential(
                     torch.nn.Linear(M, n_hidden_units), #M features to H hiden units
                     # 1st transfer function, either Tanh or ReLU:
-                    torch.nn.Tanh(),                            #torch.nn.ReLU(),
+                    torch.nn.ReLU(),                            #torch.nn.ReLU(),
                     torch.nn.Linear(n_hidden_units, 1), # H hidden units to 1 output neuron
                     torch.nn.Sigmoid() # final tranfer function
                     )
