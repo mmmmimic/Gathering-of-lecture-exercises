@@ -20,7 +20,7 @@ C = len(classNames)
 # Fit model using bootstrap aggregation (boosting, AdaBoost):
 
 # Number of rounds of bagging
-L = 100
+L = 500
 
 # Weights for selecting samples in each bootstrap
 weights = np.ones((N,),dtype=float)/N

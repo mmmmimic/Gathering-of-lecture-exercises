@@ -46,3 +46,5 @@ for train_index, test_index in CV.split(X,y):
     k+=2
     
 show()    
+
+# 因为只用了一个attribute所以效果很差。太多的attribute会导致速度很慢。
