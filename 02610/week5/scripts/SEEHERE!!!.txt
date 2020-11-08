@@ -1,3 +1,0 @@
-To whom it may concern: Hi! For some reason, I'm not able to draw graphs in a live script. That's why I splitted the exercise into serval parts. 
-Sorry for that. 
-Assignment1 folder contains question 2 and 3 in the instruction. 
