@@ -5,13 +5,13 @@ from toolbox_02450 import clusterplot
 from scipy.cluster.hierarchy import linkage, fcluster, dendrogram
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/synth1.mat')
+mat_data = loadmat('../Data/iris.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
-attributeNames = [name[0] for name in mat_data['attributeNames'].squeeze()]
-classNames = [name[0][0] for name in mat_data['classNames']]
+#attributeNames = [name[0] for name in mat_data['attributeNames'].squeeze()]
+#classNames = [name[0][0] for name in mat_data['classNames']]
 N, M = X.shape
-C = len(classNames)
+#C = len(classNames)
 
 
 # Perform hierarchical/agglomerative clustering on data matrix
@@ -21,7 +21,7 @@ Metric = 'euclidean'
 Z = linkage(X, method=Method, metric=Metric)
 
 # Compute and display clusters by thresholding the dendrogram
-Maxclust = 4
+Maxclust = 3
 cls = fcluster(Z, criterion='maxclust', t=Maxclust)
 figure(1)
 clusterplot(X, cls.reshape(cls.shape[0],1), y=y)

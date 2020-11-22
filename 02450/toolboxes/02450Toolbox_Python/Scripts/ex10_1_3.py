@@ -42,3 +42,7 @@ legend(['Rand', 'Jaccard', 'NMI'], loc=4)
 show()
 
 print('Ran Exercise 10.1.3')
+
+# if use sum of distance
+# with the increase of cluster number
+# the sum of distance will decrease

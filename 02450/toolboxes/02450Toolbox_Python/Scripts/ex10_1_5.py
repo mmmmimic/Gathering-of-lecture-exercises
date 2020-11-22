@@ -6,19 +6,19 @@ from sklearn.cluster import k_means
 
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wildfaces.mat')
-#mat_data = loadmat('../Data/digits.mat') #<-- uncomment this for using the digits dataset 
+#mat_data = loadmat('../Data/wildfaces.mat')
+mat_data = loadmat('../Data/digits.mat') #<-- uncomment this for using the digits dataset 
 
 X = mat_data['X']
 N, M = X.shape
 # Image resolution and number of colors
-x = 40 #<-- change this for using the digits dataset
-y = 40 #<-- change this for using the digits dataset
-c = 3 #<-- change this for using the digits dataset
+x = 16 #<-- change this for using the digits dataset
+y = 16 #<-- change this for using the digits dataset
+c = 1 #<-- change this for using the digits dataset
 
 
 # Number of clusters:
-K = 10
+K = 8
 
 # Number of repetitions with different initial centroid seeds
 S = 1

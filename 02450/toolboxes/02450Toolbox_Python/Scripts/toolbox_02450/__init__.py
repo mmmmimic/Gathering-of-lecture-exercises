@@ -535,7 +535,7 @@ def clusterval(y, clusterid):
       Rand       Rand index.
       Jaccard    Jaccard coefficient.
     '''
-    NMI = cluster_metrics.supervised.normalized_mutual_info_score(y,clusterid)
+    NMI = cluster_metrics.normalized_mutual_info_score(y,clusterid)
     
     #y = np.asarray(y).ravel(); clusterid = np.asarray(clusterid).ravel()
     C = np.unique(y).size; K = np.unique(clusterid).size; N = y.shape[0]
