@@ -16,7 +16,9 @@ N, M = X.shape
 C = len(classNames)
 # Number of clusters
 K = 4
+# We should find number of clusters in a way
 cov_type = 'full' # e.g. 'full' or 'diag'
+# this depends on the type of data
 
 # define the initialization procedure (initial value of means)
 initialization_method = 'random'#  'random' or 'kmeans'

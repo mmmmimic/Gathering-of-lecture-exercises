@@ -1,0 +1,41 @@
+ELECTRONIC HANDIN FOR THE 02450 MOCK EXAM 2020
+
+The exam is multiple choice. All questions have four possible answers marked by the letters A, B, C, and D as well as the answer "Don't know" marked by the letter E. Correct answer gives 3 points, wrong answer gives -1 point, and "Don't know" (E) gives 0 points.
+
+The individual questions are answered by replacing the question marks '?' at each of the 27 questions with one of the letters A, B, C, D, or E.
+
+Please do not change the file format or write additional comments asides your student number and your answers in terms of the letters A, B, C, D or E for each of the questions. 
+
+PLEASE ONLY USE THE PAPER FRONT PAGE FOR HANDIN UNDER THE EXTRAORDINARY CIRCUMSTANCE THAT YOU ARE UNABLE TO HAND IN DIGITALLY USING THIS SYSTEM.
+
+Student number: <s192230>
+
+Q01: ?
+Q02: ?
+Q03: ?
+Q04: ?
+Q05: ?
+Q06: ?
+Q07: ?
+Q08: ?
+Q09: ?
+Q10: ?
+
+Q11: ?
+Q12: ?
+Q13: ?
+Q14: ?
+Q15: ?
+Q16: ?
+Q17: ?
+Q18: ?
+Q19: ?
+Q20: ?
+
+Q21: ?
+Q22: ?
+Q23: ?
+Q24: ?
+Q25: ?
+Q26: ?
+Q27: ?
