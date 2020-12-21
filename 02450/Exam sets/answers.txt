@@ -1,0 +1,41 @@
+ELECTRONIC HANDIN FOR THE 02450 EXAM WINTER 2020
+
+The exam is multiple choice. All questions have four possible answers marked by the letters A, B, C, and D as well as the answer "Don't know" marked by the letter E. Correct answer gives 3 points, wrong answer gives -1 point, and "Don't know" (E) gives 0 points.
+
+The individual questions are answered by replacing the question marks '?' at each of the 27 questions with one of the letters A, B, C, D, or E.
+
+Please do not change the file format or write additional comments asides your student number and your answers in terms of the letters A, B, C, D or E for each of the questions. 
+
+This is file 1 for the hand-in. Remember you also have to hand in the  additional file 2 providing full explanations for your answers (see details and allowed file formats on the front page of the exam).
+
+Student number: s192230
+
+Q01: C
+Q02: B
+Q03: C
+Q04: A
+Q05: C
+Q06: D
+Q07: A
+Q08: C
+Q09: C
+Q10: B
+
+Q11: C
+Q12: D
+Q13: B
+Q14: D
+Q15: C
+Q16: A
+Q17: D
+Q18: B
+Q19: A
+Q20: B
+
+Q21: D
+Q22: A
+Q23: B
+Q24: C
+Q25: C
+Q26: D
+Q27: C
