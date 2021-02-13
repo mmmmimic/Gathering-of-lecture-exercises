@@ -76,5 +76,36 @@
 |week7|State Estimation|
 |week8|Classification|
 |week9|Vidual Odometry|  
+## 02450 Introduction to Machine Learning and Data Fitting
+| Exercise   | Topic |
+| ---------- | --- |
+| week1 |  Introduction |
+| week2 |  	Data, feature extraction and PCA|
+| week3|	Measures of similarity, summary statistics and probabilities|
+|week4|	Probability densities and data visualization|
+|week5|Decision trees and linear regression|
+|week6|Overfitting, cross-validation and Nearest Neighbor|
+|week7|Performance evaluation, Bayes, and Naive Bayes|
+|week8|Artificial Neural Networks and Bias/Variance|
+|week9|AUC and ensemble methods| 
+|week10|K-means and hierarchical clustering| 
+|week11|Mixture models and density estimation| 
+|week12|Association mining| 
+## 02456 Deep Learning
+| week1 |  Feedforward network |
+| week2 |  Feedforward network|
+| week3|   Feedforward network|
+|week4|	Convolutional neural network|
+|week5|Recurrent neural network|
+|week6|Mini projekt|
+|week7|Unsupervised learning|
+|week8|Reinforcement learning|
+## 02610 Optimization and Data Fitting
+| | |
+## 02805 Social Graphs
+| | |
+## 02807 Computational Tools for Data Science
+| | |
+
 
 
