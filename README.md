@@ -92,6 +92,8 @@
 |week11|Mixture models and density estimation| 
 |week12|Association mining| 
 ## 02456 Deep Learning
+| Exercise   | Topic |
+| ---------- | --- |
 | week1 |  Feedforward network |
 | week2 |  Feedforward network|
 | week3|   Feedforward network|
@@ -101,11 +103,14 @@
 |week7|Unsupervised learning|
 |week8|Reinforcement learning|
 ## 02610 Optimization and Data Fitting
-| | |
+| Exercise   | Topic |
+| ---------- | --- |
 ## 02805 Social Graphs
-| | |
+| Exercise   | Topic |
+| ---------- | --- |
 ## 02807 Computational Tools for Data Science
-| | |
+| Exercise   | Topic |
+| ---------- | --- |
 
 
 
