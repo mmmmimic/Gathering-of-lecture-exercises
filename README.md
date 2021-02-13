@@ -94,9 +94,9 @@
 ## 02456 Deep Learning
 | Exercise   | Topic |
 | ---------- | --- |
-| week1 |  Feedforward network |
-| week2 |  Feedforward network|
-| week3|   Feedforward network|
+| week1 |  Feedforward network 1|
+| week2 |  Feedforward network 2|
+| week3|   Feedforward network 3|
 |week4|	Convolutional neural network|
 |week5|Recurrent neural network|
 |week6|Mini projekt|
