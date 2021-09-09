@@ -1,5 +1,5 @@
 # Gathering of Lecture Exercises
-Hi there!    
+Hi there! Velkommen til my collection of the exercises at DTU.     
 ## 02502 Image Analysis
 | Exercise   | Topic |
 | ---------- | --- |
