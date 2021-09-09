@@ -1,4 +1,5 @@
 # Gathering of Lecture Exercises
+Hi there!    
 ## 02502 Image Analysis
 | Exercise   | Topic |
 | ---------- | --- |
