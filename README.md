@@ -76,7 +76,7 @@ Hi there! Velkommen til my collection of the exercises at DTU.
 |week6|3D Point Cloud Processing 2|
 |week7|State Estimation|
 |week8|Classification|
-|week9|Vidual Odometry|  
+|week9|Visual Odometry|  
 ## 02450 Introduction to Machine Learning and Data Fitting
 | Exercise   | Topic |
 | ---------- | --- |
