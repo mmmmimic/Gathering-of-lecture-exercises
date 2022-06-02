@@ -1,5 +1,6 @@
 # Gathering of Lecture Exercises
-Hi there! Velkommen til my collection of the exercises at DTU.     
+Hi there! I collected my exercises at DTU during my master's (Autonomous Systems Engineering). 
+
 ## 02502 Image Analysis
 | Exercise   | Topic |
 | ---------- | --- |
