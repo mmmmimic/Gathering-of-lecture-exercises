@@ -118,17 +118,4 @@ I hope these exercises can endow you with a clear overall view of this master's 
 |week7|Unsupervised learning|
 |week8|Reinforcement learning|
 
-## 02610 Optimization and Data Fitting
-| Exercise   | Topic |
-| ---------- | --- |
-
-## 02805 Social Graphs
-| Exercise   | Topic |
-| ---------- | --- |
-
-## 02807 Computational Tools for Data Science
-| Exercise   | Topic |
-| ---------- | --- |
-
-
 
