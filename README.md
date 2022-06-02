@@ -4,7 +4,7 @@ Hi there! This is a repo for [AUS](https://www.dtu.dk/english/education/graduate
 
 I collected my exercises at DTU during my master's. 
 
-I hope these exercises can endow you with a clear overall view of this master's program, as well as some hints when struggling with the assignments. Please refer to my answers only when you run out of your ideas. You should never break the [code of hornor](https://www.dtu.dk/english/news/all-news/nyhed?id=c826cb2b-0198-4296-8ea7-299926c18ae2).      
+I hope these exercises can endow you with a clear overall view of this master's program, as well as some hints when struggling with the assignments. Please refer to my answers only when you run out of your ideas. You should never break the [code of honor](https://www.dtu.dk/english/news/all-news/nyhed?id=c826cb2b-0198-4296-8ea7-299926c18ae2).      
 
 ## 02502 Image Analysis
 | Exercise   | Topic |
