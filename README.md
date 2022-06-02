@@ -1,6 +1,6 @@
 # Gathering of Lecture Exercises
 
-Hi there! This is a repo for AUS (Autonomous Systems Engineering[https://www.dtu.dk/english/education/graduate/msc-programmes/Autonomous-Systems]) students at the Technical University of Denmark. 
+Hi there! This is a repo for AUS (Autonomous Systems Engineering[!https://www.dtu.dk/english/education/graduate/msc-programmes/Autonomous-Systems]) students at the Technical University of Denmark. 
 
 I collected my exercises at DTU during my master's. 
 
