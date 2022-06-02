@@ -1,5 +1,10 @@
 # Gathering of Lecture Exercises
-Hi there! I collected my exercises at DTU during my master's (Autonomous Systems Engineering). 
+
+Hi there! This is a repo for AUS (Autonomous Systems Engineering[https://www.dtu.dk/english/education/graduate/msc-programmes/Autonomous-Systems]) students at the Technical University of Denmark. 
+
+I collected my exercises at DTU during my master's. 
+
+I hope these exercises can endow you with a clear overall view of this master's program, as well as some hints when struggling with the assignments. Please refer to my answers only when you run out of your ideas.     
 
 ## 02502 Image Analysis
 | Exercise   | Topic |
@@ -15,6 +20,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |ex10|Registration|
 |ex11|Line and Path Tracing|
 |exam||
+
 ## 02504 Computer Vision
 | Exercise   | Topic |
 | ---------- | --- |
@@ -26,6 +32,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week6|Simple Features|
 |week7|ORB Features|
 |week8|Structured Light| 
+
 ## 31383 Robotics
 | Exercise   | Topic |
 | ---------- | --- |
@@ -37,6 +44,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week9|Control an Industrial Robot|
 |final assignment|Alto Robot Analysis|
 |exam|| 
+
 ## 31388  Advanced Autonomous Robot
 | Exercise   | Topic |
 | ---------- | --- |
@@ -47,6 +55,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |ex5|Vision|
 |ex8-11|Extended Kalman Filter|
 |ex12-13|Path Planner|
+
 ## 31390 Unmanned Autonomous Systems
 | Exercise   | Topic |
 | ---------- | --- |
@@ -56,6 +65,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 | part4|Path Planning|
 |part5|Trajectory Planning|
 |part6|Simulation|
+
 ## 31391 Software Framework for Autonomous Robots
 | Exercise   | Topic |
 | ---------- | --- |
@@ -66,6 +76,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week5-6|Motion Planning|
 |week 7|Autonomous Guided Vehicle|
 |week 10| Final Assignment|
+
 ## 31392 Perception for Autonomous System
 | Exercise   | Topic |
 | ---------- | --- |
@@ -78,6 +89,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week7|State Estimation|
 |week8|Classification|
 |week9|Visual Odometry|  
+
 ## 02450 Introduction to Machine Learning and Data Fitting
 | Exercise   | Topic |
 | ---------- | --- |
@@ -93,6 +105,7 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week10|K-means and hierarchical clustering| 
 |week11|Mixture models and density estimation| 
 |week12|Association mining| 
+
 ## 02456 Deep Learning
 | Exercise   | Topic |
 | ---------- | --- |
@@ -104,12 +117,15 @@ Hi there! I collected my exercises at DTU during my master's (Autonomous Systems
 |week6|Mini projekt|
 |week7|Unsupervised learning|
 |week8|Reinforcement learning|
+
 ## 02610 Optimization and Data Fitting
 | Exercise   | Topic |
 | ---------- | --- |
+
 ## 02805 Social Graphs
 | Exercise   | Topic |
 | ---------- | --- |
+
 ## 02807 Computational Tools for Data Science
 | Exercise   | Topic |
 | ---------- | --- |
